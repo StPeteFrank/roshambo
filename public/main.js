@@ -2,13 +2,18 @@ let p1choice = ''
 let p2choice = ''
 let whoWon = document.querySelector('.winner')
 
+// AND  is  &&
+// OR   is  ||
+// ===    equal to
+
+//what each player selected
 const detectWinner = () => {
   if (
     (p1choice === 'rock' && p2choice === 'scissors') ||
     (p1choice === 'paper' && p2choice === 'rock') ||
     (p1choice === 'scissors' && p2choice === 'paper')
   ) {
-    whoWon.textContent = ' Player One Wins!'
+    whoWon.textContent = ' PLAYER ONE IS A BEAST !'
   }
 
   if (
@@ -16,7 +21,7 @@ const detectWinner = () => {
     (p2choice === 'paper' && p1choice === 'rock') ||
     (p2choice === 'scissors' && p1choice === 'paper')
   ) {
-    whoWon.textContent = ' Player Two Wins!'
+    whoWon.textContent = ' PLAYER TWO IS UNSTOPPABLE !'
   }
 
   if (
@@ -24,7 +29,7 @@ const detectWinner = () => {
     (p1choice === 'paper' && p2choice === 'paper') ||
     (p1choice === 'scissors' && p2choice === 'scissors')
   ) {
-    whoWon.textContent = ' Tie!'
+    whoWon.textContent = ' GREAT MINDS THINK ALIKE !'
   }
 }
 
@@ -64,7 +69,8 @@ const playerTwoClicksScissors = () => {
   console.log('player two chose', p2choice)
   detectWinner()
 }
-
+// Assigning variables to my classes, ex: '.player .rock' = playerOneChoseRock
+// Then adding and event listener to that variable
 const main = () => {
   let playerOneChoseRock = document.querySelector('.player-1 .rock')
   playerOneChoseRock.addEventListener('click', playerOneClicksRock)
@@ -84,6 +90,7 @@ const main = () => {
   let playerTwoChoseScissors = document.querySelector('.player-2 .scissors')
   playerTwoChoseScissors.addEventListener('click', playerTwoClicksScissors)
 
+  // Button for play again
   document.querySelector('.play-again').addEventListener('click', () => {
     document.location = '/'
   })
@@ -95,19 +102,3 @@ document.addEventListener('DOMContentLoaded', main)
 // Remember when player 1 chose "rock"
 
 // Indicate when players have made a choice
-
-// comparison operators
-// ===    equal to
-// !==    not equal to
-// >      great than
-// <      less than
-// >=     greater than or equal to
-// <=     less than or equal to
-
-// AND    &&
-// OR     ||
-
-//making it so that if I click any of these options,
-//it returns nothing until the other player selects one
-//then making it so that the game determines a winner based on
-//what each player selected
