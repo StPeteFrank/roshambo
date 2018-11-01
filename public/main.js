@@ -38,11 +38,12 @@ const goAgain = () => {
   p2choice = ''
   whoWon.textContent = ''
 }
-
+// Defining functions
 const playerOneClicksRock = () => {
   p1choice = 'rock'
   console.log('player one chose', p1choice)
   detectWinner()
+  // detectWinner () is calling for the function
 }
 const playerOneClicksPaper = () => {
   p1choice = 'paper'
@@ -69,7 +70,7 @@ const playerTwoClicksScissors = () => {
   console.log('player two chose', p2choice)
   detectWinner()
 }
-// Assigning variables to my classes, ex: '.player .rock' = playerOneChoseRock
+// Assigning functions to my variables
 // Then adding and event listener to that variable
 const main = () => {
   let playerOneChoseRock = document.querySelector('.player-1 .rock')
