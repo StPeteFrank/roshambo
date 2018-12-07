@@ -1,9 +1,5 @@
 # Roshambo
 
-<p align="center">
-<img src="src/Roshambo.gif">
-</p>
-
 ## Description
 
 A rock paper scissor game built using HTML, CSS, and basic Javascript.
